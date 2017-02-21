@@ -1,0 +1,21 @@
+{
+  "name": "summerino-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "Colourful theme, without madness. Based on orange, blue, green colours.",
+  "keywords": [
+    "syntax",
+    "theme",
+    "summer",
+    "blue",
+    "yellow",
+    "nice", 
+    "orange",
+    "green"
+  ],
+  "repository": "https://github.com/Visorien/summerino-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
