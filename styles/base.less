@@ -83,12 +83,12 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   color: @method;
 }
 .syntax--function, .syntax--keyword, .syntax--control {
-  color: @keyword;
+  color: @css-symbol;
 }
 .syntax--name {
   color: @variable;
 }
-.syntax--string {
+.syntax--string, .syntax--string-contents {
   color: @string;
 }
 &.syntax--punctuation.syntax--definition {
@@ -99,12 +99,55 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   &.syntax--comment {
     color: @comment;
   }
+  &.syntax--variable {
+    color: @variable;
+  }
 }
 .syntax--variable.syntax--parametr.syntax--function {
   color: @orange;
 }
-.syntax--variable.syntax--other {
-  color: @red;
+
+.syntax--keyword.syntax--other {
+  color: @keyword;
+  &.syntax--using {
+    color: @modifier;
+  }
+}
+.syntax--support.syntax--class.syntax--builtin {
+  color: @method;
+}
+.syntax--storage {
+  &.syntax--modifier {
+    color: @modifier;
+  }
+  &.syntax--type {
+    color: @method;
+  }
+}
+.syntax--keyword.syntax--class {
+  color: @modifier;;
+}
+.syntax--keyword.syntax--operator {
+  color: @modifier;
+}
+.syntax--entity.syntax--name.syntax--class {
+  color: @method;
+}
+
+//java
+.syntax--java {
+  &.syntax--keyword.syntax--other.syntax--import {
+    color: @css-symbol;
+  }
+  &.syntax--meta.syntax--body {
+    color: @variable;
+  }
+  &.syntax--variable.syntax--other.syntax--object {
+    color: @syntax-text-color;
+    &.syntax--property {
+      color: @syntax-text-color;
+    }
+  }
 }
 
 //html
@@ -165,6 +208,16 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
   &.syntax--support.syntax--function {
     color: @css-value;
   }
+  &.syntax--keyword.syntax--other.syntax--unit {
+    color: @blue;
+  }
+}
+
+//less
+.syntax--less {
+  &.syntax--variable.syntax--other {
+    color: @red;
+  }
 }
 
 //js
@@ -176,6 +229,16 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     color: @variable;
   }
   &.syntax--variable.syntax--other {
+    color: @method;
+  }
+}
+
+//python
+.syntax--python {
+  &.syntax--function-call {
+    color: @variable;
+  }
+  &.syntax--keyword.syntax--other {
     color: @method;
   }
 }
